@@ -1,5 +1,7 @@
-Đề tài của nhóm mình : Ứng dụng định vị thiết bị di động
-+ Người dùng có thể tạo danh sách các thiết bị di động cần theo dõi
-+ Người dùng có thể xem vị trí của một thiết bị trong danh sách trên
-+ Ứng dụng hỗ trợ tìm đường đi từ thiết bị của người dùng đến một thiết bị khác
+Đề tài đồ án cuối kì đã bị chuyển thành Ứng dụng đồ họa
+Giảng viên hướng dẫn là thầy Phạm Nguyễn Sơn Tùng
 
+Bài tập tuần 04 được phân công như sau
++ Vũ làm phần giao diện (deadline 23h 19/03/2017)
++ Đăng làm phần xử lí (deadline 23h 21/03/2017)
++ Tony sẽ xem qua và nộp trên Moodle
