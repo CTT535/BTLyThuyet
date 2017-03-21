@@ -167,15 +167,7 @@
         android:id="@+id/checkBoxTennis"
         android:layout_marginTop="5dp"/>
 
-    <CheckBox
-        android:text="Others"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkboxOthers"
-        android:layout_alignBaseline="@id/checkBoxTennis"
-        android:layout_alignBottom="@+id/checkBoxTennis"
-        android:layout_toEndOf="@id/checkBoxFutbal"/>
+
 
     <CheckBox
         android:text="Futbal"
@@ -186,6 +178,16 @@
         android:layout_alignBaseline="@+id/checkBoxTennis"
         android:layout_alignBottom="@+id/checkBoxTennis"
         android:layout_toEndOf="@+id/checkBoxTennis" />
+
+    <CheckBox
+        android:text="Others"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkboxOthers"
+        android:layout_alignBaseline="@id/checkBoxTennis"
+        android:layout_alignBottom="@+id/checkBoxTennis"
+        android:layout_toEndOf="@id/checkBoxFutbal"/>
 
     <Button
         android:text="Reset"
