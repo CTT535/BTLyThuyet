@@ -1,18 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context="hcmus.angtonyvincent.registerform.RegisterForm">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textPassword"
+        android:text="Password"
+        android:ems="10"
+        android:id="@+id/editTextPassword"
+        android:layout_alignBaseline="@+id/textPassword"
+        android:layout_alignBottom="@+id/textPassword"
+        android:layout_alignRight="@+id/editTextUsername"
+        android:layout_alignEnd="@+id/editTextUsername"
+        />
 
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:ems="10"
+        android:id="@+id/editTextRetype"
+        android:layout_alignBaseline="@+id/textRetype"
+        android:layout_alignBottom="@+id/textRetype"
+        android:layout_alignLeft="@+id/editTextUsername" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="username"
+        android:ems="10"
+        android:id="@+id/editTextUsername"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:text="Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textUsername"
+        android:layout_alignBaseline="@+id/editTextUsername"
+        android:layout_alignBottom="@+id/editTextUsername"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textPassword"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textUsername"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:text="Retype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textRetype"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignStart="@+id/textPassword"
+        android:layout_alignEnd="@+id/textPassword"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+        android:text="Birthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textBirthdate"
+        android:layout_below="@+id/editTextRetype"
+        android:layout_alignStart="@+id/textRetype"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:text="Select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextBirthdate"
+        android:layout_alignStart="@+id/editTextBirthdate"
+        android:id="@+id/buttonSelectDate"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editTextBirthdate"
+        android:layout_alignBaseline="@+id/textBirthdate"
+        android:layout_alignBottom="@+id/textBirthdate"
+        android:layout_alignParentEnd="true"/>
+
+
+    <TextView
+        android:text="Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textGender"
+        android:layout_below="@+id/buttonSelectDate"
+        android:layout_alignStart="@+id/textBirthdate"
+        android:layout_marginTop="15dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textGender"
+        android:layout_alignStart="@+id/textGender"
+        tools:layout_editor_absoluteY="218dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@+id/textGender"
+            android:layout_alignStart="@+id/textGender"
+            android:id="@+id/radioButtonMale" />
+
+        <RadioButton
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/radioButtonFemale"
+            android:layout_alignBottom="@+id/radioGroup"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true" />
+
+    </RadioGroup>
+
+    <TextView
+        android:text="Hobbies"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textHobbies"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignStart="@id/textGender"
+        android:layout_marginTop="15dp"/>
+
+    <CheckBox
+        android:text="Tennis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/textHobbies"
+        android:layout_alignStart="@+id/textHobbies"
+        android:id="@+id/checkBoxTennis"
+        android:layout_marginTop="5dp"/>
+
+    <CheckBox
+        android:text="Others"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkboxOthers"
+        android:layout_alignBaseline="@id/checkBoxTennis"
+        android:layout_alignBottom="@+id/checkBoxTennis"
+        android:layout_toEndOf="@id/checkBoxFutbal"/>
+
+    <CheckBox
+        android:text="Futbal"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxFutbal"
+        android:layout_alignBaseline="@+id/checkBoxTennis"
+        android:layout_alignBottom="@+id/checkBoxTennis"
+        android:layout_toEndOf="@+id/checkBoxTennis" />
+
+    <Button
+        android:text="Reset"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonReset"
+        android:layout_below="@id/checkBoxTennis"
+        android:layout_alignLeft="@id/textUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:text="Sign-Up"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSignUp"
+        android:layout_alignBaseline="@+id/buttonReset"
+        android:layout_alignBottom="@+id/buttonReset"
+        android:layout_alignRight="@+id/checkboxOthers" />
+
+
+</RelativeLayout>

@@ -1,9 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context="hcmus.angtonyvincent.registerform.ResultForm">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:text="Your information resigted"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textInformationResigted"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:text="Username"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textUsernameResigted"
+        android:layout_below="@id/textInformationResigted"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@id/textInformationResigted"
+        />
+
+    <EditText
+        android:text="UserResigted"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUserResigted"
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:layout_alignBaseline="@id/textUsernameResigted"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:text="Password"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPasswordResigted"
+        android:layout_below="@id/textUsernameResigted"
+        android:layout_alignStart="@id/textUsernameResigted"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:text="Password"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPasswordResigted"
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:layout_alignBaseline="@id/textPasswordResigted"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:text="Birthdate"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBirthdateResigted"
+        android:layout_below="@id/textPasswordResigted"
+        android:layout_alignStart="@id/textUsernameResigted"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:text="dd/mm/yyyy"
+        android:textSize="20sp"
+        android:inputType="date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextBorthdateResigted"
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:layout_alignBaseline="@id/textBirthdateResigted"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:text="Gender"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textGenderResigted"
+        android:layout_below="@id/textBirthdateResigted"
+        android:layout_alignStart="@id/textUsernameResigted"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:text="Gender"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextGenderResigted"
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:layout_alignBaseline="@id/textGenderResigted"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:text="Hobbies"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textHobbiesResigted"
+        android:layout_below="@id/textGenderResigted"
+        android:layout_alignStart="@id/textUsernameResigted"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:text="hobbies"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextHobbiesResigted"
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:layout_alignBaseline="@id/textHobbiesResigted"
+        android:layout_marginStart="20dp"
+        />
+
+    <Button
+        android:text="Exit"
+        android:textSize="20sp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonExit"
+        android:layout_below="@id/textHobbiesResigted"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
