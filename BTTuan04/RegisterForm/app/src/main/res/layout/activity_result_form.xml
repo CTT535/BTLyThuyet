@@ -8,15 +8,14 @@
     tools:context="hcmus.angtonyvincent.registerform.ResultForm">
 
     <TextView
-        android:text="Your information resigted"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"
+        android:id="@+id/textInformationResigted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textInformationResigted"
         android:layout_marginTop="10dp"
-        />
+        android:fontFamily="sans-serif"
+        android:text="Your information registered"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:text="Username"
@@ -30,15 +29,14 @@
         />
 
     <EditText
-        android:text="UserResigted"
-        android:textSize="20sp"
+        android:id="@+id/editTextUserResigted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextUserResigted"
-        android:layout_toEndOf="@id/textUsernameResigted"
         android:layout_alignBaseline="@id/textUsernameResigted"
         android:layout_marginStart="20dp"
-        />
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:text="UserRegistered"
+        android:textSize="20sp" />
 
     <TextView
         android:text="Password"
@@ -75,16 +73,15 @@
         />
 
     <EditText
-        android:text="dd/mm/yyyy"
-        android:textSize="20sp"
-        android:inputType="date"
+        android:id="@+id/editTextBirthdateResigted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextBorthdateResigted"
-        android:layout_toEndOf="@id/textUsernameResigted"
         android:layout_alignBaseline="@id/textBirthdateResigted"
         android:layout_marginStart="20dp"
-        />
+        android:layout_toEndOf="@id/textUsernameResigted"
+        android:inputType="date"
+        android:text="dd/mm/yyyy"
+        android:textSize="20sp" />
 
     <TextView
         android:text="Gender"
