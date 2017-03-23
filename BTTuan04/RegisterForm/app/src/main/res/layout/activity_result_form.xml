@@ -29,6 +29,10 @@
         />
 
     <EditText
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:id="@+id/editTextUserResigted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +54,10 @@
         />
 
     <EditText
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:text="Password"
         android:textSize="20sp"
         android:inputType="textPassword"
@@ -73,6 +81,10 @@
         />
 
     <EditText
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:id="@+id/editTextBirthdateResigted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,6 +107,10 @@
         />
 
     <EditText
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:text="Gender"
         android:textSize="20sp"
         android:inputType="text"
@@ -118,6 +134,10 @@
         />
 
     <EditText
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:text="hobbies"
         android:textSize="20sp"
         android:inputType="text"

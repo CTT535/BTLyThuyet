@@ -7,11 +7,9 @@ import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Build;
-import android.provider.MediaStore;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -104,18 +102,50 @@ public class RegisterForm extends AppCompatActivity {
         SharedPreferences myPrefContainer = getSharedPreferences("DATA", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = myPrefContainer.edit();
 
-        // save name, password & birthdate
-        editor.putString("username",txtUser.getText().toString());
-        editor.putString("password",txtPassword.getText().toString());
-        editor.putString("birthdate",txtBthDate.getText().toString());
+        // check username
+        if (txtUser.getText().toString().equals("")) {
+            Toast.makeText(RegisterForm.this, "Invalid username", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else {
+            editor.putString("username",txtUser.getText().toString());
+        }
 
-        // Save gender text to SharedPreferences
+        // check password
+        if (txtPassword.getText().toString().equals("")) {
+            Toast.makeText(RegisterForm.this, "Invalid password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else {
+            editor.putString("password",txtPassword.getText().toString());
+        }
+
+        // check retyped password
+        if (!txtPassword.getText().toString().equals(txtPasswordRetype.getText().toString())) {
+            Toast.makeText(RegisterForm.this, "The retyped password is not match with your password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // check birthdate
+        if (!this.isValidDate(txtBthDate.getText().toString())) {
+            Toast.makeText(RegisterForm.this, "Invalid date", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else {
+            editor.putString("birthdate",txtBthDate.getText().toString());
+        }
+
+        // check gender
         if (this.rdbttnMale.isChecked())
             editor.putString("gender", "Male");
         else if (this.rdobttnFemale.isChecked())
             editor.putString("gender", "Female");
+        else {
+            Toast.makeText(RegisterForm.this, "Invalid gender", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        // Save hobbies
+        // check hobbies
         String hobbies = "";
         if (checkboxTennis.isChecked())
             hobbies += "Tennis";
@@ -126,16 +156,6 @@ public class RegisterForm extends AppCompatActivity {
                 hobbies += ", Futbal";
         }
         editor.putString("hobbies", hobbies);
-
-        // check date and password invalid
-        if (!this.isValidDate(txtBthDate.getText().toString())) {
-            Toast.makeText(RegisterForm.this, "Not invalid date", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (!txtPassword.getText().toString().equals(txtPasswordRetype.getText().toString())) {
-            Toast.makeText(RegisterForm.this, "The password retyped is not match with your password", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         // apply changes
         editor.commit();
@@ -149,19 +169,10 @@ public class RegisterForm extends AppCompatActivity {
         System.exit(1);
     }
 
-    public void ExitApp(){
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-        System.exit(1);
-    }
-
     public void ResetInfo() {
         // reset text
-        txtUser.setText("", TextView.BufferType.EDITABLE);
-        txtPassword.setText("", TextView.BufferType.EDITABLE);
+        this.txtUser.setText("", TextView.BufferType.EDITABLE);
+        this.txtPassword.setText("", TextView.BufferType.EDITABLE);
         this.txtPasswordRetype.setText("", TextView.BufferType.EDITABLE);
         this.txtBthDate.setText("", TextView.BufferType.EDITABLE);
 
